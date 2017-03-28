@@ -1,3 +1,6 @@
+//example of page load speed
+//the behavior should return loading time of webpage in msec
+
 var page = require('webpage').create(),
   system = require('system'),
   t, address;
