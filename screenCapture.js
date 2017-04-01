@@ -1,6 +1,8 @@
 //example of screen capture with phantomJS
 //the behavior should load the webpage, renders it as an image and saves it
 
+"use strict";
+
 var page = require('webpage').create(),
     system = require('system'),
     url;

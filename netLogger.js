@@ -1,6 +1,8 @@
 //example of net logging
 //the behavior should return the request and responses of the url input
 
+"use strict";
+
 var page = require('webpage').create(),
     system = require('system'),
     url;

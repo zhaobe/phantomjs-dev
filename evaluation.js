@@ -1,6 +1,8 @@
 //example of evaluate function, 
 //the behavior should return the title of the webpage
 
+"use strict";
+
 var page = require('webpage').create(),
     system = require('system'),
     url;
