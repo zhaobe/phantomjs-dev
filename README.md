@@ -12,9 +12,9 @@
 - once you successfully see that phantomjs is in your PATH you can use `phantomjs hello.js` to run a simple phantomjs of hello.js
 
 ## Development order for files
-- hello.js
-- loadspeed.js
-- evaluation.js
-- netLogger.js
-- screenCapture.js
-- outputEncode.js
+- hello.js: a simple hello world with phantomjs
+- loadspeed.js: opens an input webpage and tests the loadspeed
+- evaluation.js: uses the evaluate function in phantomjs
+- netLogger.js: sends get requests and logs them to console
+- screenCapture.js: takes a screenshot of an input webpage
+- outputEncode.js:
