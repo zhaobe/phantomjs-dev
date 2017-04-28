@@ -17,4 +17,4 @@
 - evaluation.js: uses the evaluate function in phantomjs
 - netLogger.js: sends get requests and logs them to console
 - screenCapture.js: takes a screenshot of an input webpage
-- outputEncode.js:
+- outputEncode.js: attempts to output the UTF-8 encoding in other encodings
