@@ -11,6 +11,11 @@ var page = require('webpage').create(),
 
 //url = system.args[1];
 
+// for printing out console messages
+page.onConsoleMessage = function (msg) {
+  console.log(msg);
+}
+
 function click(el) {
   var ev = document.createEvent("MouseEvent");
   ev.initMouseEvent(
@@ -28,14 +33,26 @@ function click(el) {
 
 
 page.open("https://www.google.com/", function (status) {
-  var title = page.evaluate(function () {
-    return document.title;
-    
+  console.log('opening page...');
+
+  // form filling and submission
+  page.evaluate(function () {
+    console.log('the document title is:', document.title);
+
     var form = document.querySelector('form');
-    
+    var selectElement = form.querySelector('input[name="q"]');
+    selectElement.value = 'phantomjs';
+
+    form.submit();
   });
-  console.log('The page title is ' + title);
+
+  // verifying the url has been updated with 
+  // a timeout for page to finish loading
+  window.setTimeout(function () {
+    page.evaluate(function () {
+      console.log(window.location.href);
+    });
+    phantom.exit();
+  }, 4000);
+
 });
-
-
-phantom.exit();
